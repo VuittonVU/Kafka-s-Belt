@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemy), 1, spawnInterval);
+        InvokeRepeating(nameof(SpawnEnemy), 1, spawnInterval);//spawn setelah 1 detik 
     }
 
     void SpawnEnemy()
@@ -18,3 +18,4 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
 }
+

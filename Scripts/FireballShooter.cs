@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class FireballShooter : MonoBehaviour
 {
-    public GameObject fireballPrefab;
-    public Transform firePoint;
+    public GameObject fireballPrefab;//prefab yang akan di munculkan
+    public Transform firePoint;//posisi dan rotasi fireball ditembak 
     public float maxScale = 3f;
     public float chargeSpeed = 1f;
 
-    GameObject currentFB;
+    GameObject currentFB;//fireball yang dicharge
     float charge = 0f;
 
     void Update()
@@ -23,7 +23,7 @@ public class FireballShooter : MonoBehaviour
 
             // Update emission
             currentFB.GetComponent<Renderer>().material.SetFloat("_EmissionStrength",
-                currentFB.transform.localScale.x);
+                currentFB.transform.localScale.x);//makin besar makin terang
         }
 
         // === HOLDING ===
@@ -32,7 +32,7 @@ public class FireballShooter : MonoBehaviour
             charge += Time.deltaTime * chargeSpeed;
 
             // scale grows with charge
-            float newScale = Mathf.Clamp(currentFB.transform.localScale.x + Time.deltaTime * chargeSpeed, 0.3f, maxScale);
+            float newScale = Mathf.Clamp(currentFB.transform.localScale.x + Time.deltaTime * chargeSpeed, 0.3f, maxScale);//fireball yang dicharge+skala yang di sumbu x, clamp buat paksa max value
             currentFB.transform.localScale = Vector3.one * newScale;
 
             // Update emission
@@ -44,7 +44,7 @@ public class FireballShooter : MonoBehaviour
         {
             // Apply velocity (FIX)
             Rigidbody rb = currentFB.GetComponent<Rigidbody>();
-            rb.linearVelocity = firePoint.forward * 20f;
+            rb.linearVelocity = firePoint.forward * 20f;//tembak ke depan 
 
             // Set damage based on scale (ceil to int)
             int dmg = Mathf.CeilToInt(currentFB.transform.localScale.x);
@@ -54,3 +54,4 @@ public class FireballShooter : MonoBehaviour
         }
     }
 }
+

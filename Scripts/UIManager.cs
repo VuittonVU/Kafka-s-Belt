@@ -33,7 +33,8 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame() 
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; //memastikan tidak dalam keadaan pause
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
+

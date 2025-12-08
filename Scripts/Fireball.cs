@@ -2,8 +2,8 @@
 
 public class Fireball : MonoBehaviour
 {
-    public GameObject explosionFX;
-    public float selfDestructTime = 5f;
+    public GameObject explosionFX;//prefab efek ledakan
+    public float selfDestructTime = 5f; //kalau ga kena apapun maka akan hancur 
     public int damage = 1;
 
     void Start()
@@ -62,3 +62,4 @@ public class Fireball : MonoBehaviour
         }
     }
 }
+

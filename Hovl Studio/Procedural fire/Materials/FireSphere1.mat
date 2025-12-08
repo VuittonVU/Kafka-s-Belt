@@ -1,4 +1,4 @@
-%YAML 1.1
+%YAML 1.1//file ini jarang di update secara manual bisa dari GUI unity
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
@@ -18,11 +18,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
+    - _MainTex: //tekstur api
         m_Texture: {fileID: 2800000, guid: 31679c4b857f0d140bd9566b86eb8674, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TextureSample0:
+    - _TextureSample0://noise
         m_Texture: {fileID: 2800000, guid: c8ada4fdced7c07409542d983b96835e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -31,14 +31,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amplitude: 1
+    - _Amplitude: 1 //efek gelombang api
     - _Depthpower: 1
-    - _Emission: 2
-    - _Frequency: 10
+    - _Emission: 2 //seberapa terang material
+    - _Frequency: 10 //seberapa cepat transformasi bola api
     - _Opacity: 1
-    - _StartFrequency: 2
+    - _StartFrequency: 2 //detail awal gelombang
     - _Useblack: 0
     - _Usedepth: 0
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}//main color 

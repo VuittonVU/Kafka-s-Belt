@@ -7,9 +7,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        UIManager.Instance.gameOverPanel.SetActive(false);
+        UIManager.Instance.gameOverPanel.SetActive(false);//sembuyin panel game over
         currentHP = maxHP;
-        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
+        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);//update ui tampilan hp
     }
 
     public void TakeDamage(int dmg)
@@ -36,3 +36,4 @@ public class PlayerHealth : MonoBehaviour
         Time.timeScale = 0f;
     }
 }
+

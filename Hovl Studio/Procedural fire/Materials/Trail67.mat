@@ -1,4 +1,4 @@
-%YAML 1.1
+%YAML 1.1//file untuk efek trail, jejak api
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c4f655f5d01f55547a23a546b58afd04, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4f655f5d01f55547a23a546b58afd04, type: 3}//tekstur khusus trail 
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:

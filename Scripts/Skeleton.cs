@@ -11,15 +11,15 @@ public class Skeleton : MonoBehaviour
     [Header("DPS Settings")]
     public float damageInterval = 1f;
 
-    private Transform player;
-    private Material[] mats;
+    private Transform player;//target
+    private Material[] mats;//efek flash
 
     private bool touchingPlayer = false;
     private float damageTimer = 0f;
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;//cari yang punya tag player
 
         // AMBIL SEMUA SkinnedMeshRenderer DI DALAM MODEL
         SkinnedMeshRenderer[] renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
@@ -68,7 +68,7 @@ public class Skeleton : MonoBehaviour
         transform.position += dir * speed * Time.deltaTime;
 
         if (dir != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.LookRotation(dir);//putar hadap ke player
     }
 
     // =============================
@@ -87,7 +87,7 @@ public class Skeleton : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)//sentuh player kasih damage per second
     {
         if (other.CompareTag("Player"))
         {
@@ -96,7 +96,7 @@ public class Skeleton : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)//ketika keluar dari player
     {
         if (other.CompareTag("Player"))
             touchingPlayer = false;
@@ -105,7 +105,7 @@ public class Skeleton : MonoBehaviour
     // =============================
     // RECEIVE DAMAGE
     // =============================
-    public void TakeDamage(int dmg)
+    public void TakeDamage(int dmg)//kalau kena damage maka 
     {
         hp -= dmg;
         StartCoroutine(HitFlash());
@@ -151,3 +151,4 @@ public class Skeleton : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

@@ -10,9 +10,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: 1d4a9c916d62a324e90c32798caf3f13, type: 3}
   m_ShaderKeywords: _USEBLACK_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 0 //gpu instancing tidak diaktifkan
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: -1 //render queue default 
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -36,7 +36,7 @@ Material:
     - _Frequency: 10
     - _Opacity: 1
     - _StartFrequency: 2
-    - _Useblack: 1
+    - _Useblack: 1 //pakai useblack 
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
